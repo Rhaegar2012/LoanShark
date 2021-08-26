@@ -2,7 +2,7 @@
 <html lang="en" class="h-100">
 
 <head>
-    <title>App Name: A coding Project by Jose Tellez</title>
+    <title>LoanShark: A coding Project by Jose Tellez</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -22,7 +22,7 @@
 <!--Nav Section-->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#"><img src="img/default-monochrome-white-icon.svg" width="60" height="24" class="d-inline align-text-bottom"> APP NAME</a>
+        <a class="navbar-brand" href="#"><img src="img/default-monochrome-white-icon.svg" width="60" height="24" class="d-inline align-text-bottom">LoanShark</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
             aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -50,8 +50,99 @@
 </nav>
 <!--Main Section-->
 <main class="flex-shrink-0">
+    <div class="mt-1">
+        <h3>Loan Calculator</h3>
+    </div>
     <div class="container">
+        <div class="row">
+            <!--Input form column-->
+            <div class="col">
+                <div class="container">
+                    <form>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mt-1">
+                                    <label for="loanAmountInput" class="form-label">Loan Amount ($)</label>
+                                    <input id="loanAmountInput" type="number" class="form-control" placeholder="Amount">
+                                </div>
+                                <div class="mt-1">
+                                    <label for="loanTermInput" class="form-label">Term (Months)</label>
+                                    <input id="loanTermInput" type="number" class="form-control" placeholder="Term">
+                                </div>
+                                <div class="mt-1">
+                                    <label for="loanInterestInput" class="form-label">Interest Rate (%)</label>
+                                    <input id="loanTermInput" type="number" class="form-control" placeholder="Interest rate (%)">
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class=" col-12 d-flex justify-content-end">
+                        <button id="calculateButton" type="button" class="btn btn-dark mt-2">Calculate</button>
+                    </div>
+                </div>
+            </div>
+            <!--Results display column -->
+            <div class="col">
+                <div class="justify-content-center text-center">
+                    <p>
+                        Your Monthly Payments 
+                    </p>
+                </div>
+                <div class="justify-content-center ">
+                    <h1 id="monthlyPaymentOutput"></h1>
+                </div>
+                <div class="row">
+                    <div class="col justify-content-start">
+                        <div>
+                            <label>Total Principal:</label>
+                        </div>
+                        <div>
+                            <label>Total Interest:</label>
+                        </div>
+                        <div>
+                            <label>Total Cost:</label>
+                        </div>
+                       
+                    </div>
+                    <div class="col justify-content-end">
+                        <div>
+                            <label id="totalPrincipalOutput">p</label>
 
+                        </div>
+                        <div>
+                            <label id="totalInterestOutput">p</label>
+                        </div>
+                        <div>
+                            <label id="totalCostOutput">p</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Amortization Table-->
+        <div class="row">
+            <div class="col">
+                <div class="container-fluid">
+                    <div class="table-responsive">
+                        <table class="table-striped">
+                            <thead>
+                                <tr>
+                                    <td>Month</td>
+                                    <td>Payment</td>
+                                    <td>Principal</td>
+                                    <td>Interest</td>
+                                    <td>Total Interest</td>
+                                    <td>Balance</td>
+                                </tr>
+                            </thead>
+                            <tbody id="amortizationTable">
+                                <!--Results go here-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
 </main>
@@ -74,11 +165,20 @@
                     </div>
                 </div>
             </div>
-
         </div>
      
     </div>
 </footer>
+<template id="tableRowTemplate">
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+</template>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
 integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous">
 </script>
@@ -88,6 +188,9 @@ integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0Ec
 <!--Link to javascript scripts-->
 <script src="js/site.js">
 
+</script>
+<script>
+    document.getElementById("calculateButton").addEventListener("click",todo);
 </script>
 </body>
 </html>
