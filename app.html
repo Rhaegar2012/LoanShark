@@ -71,7 +71,7 @@
                                 </div>
                                 <div class="mt-1">
                                     <label for="loanInterestInput" class="form-label">Interest Rate (%)</label>
-                                    <input id="loanTermInput" type="number" class="form-control" placeholder="Interest rate (%)">
+                                    <input id="loanInterestInput" type="number" class="form-control" placeholder="Interest rate (%)">
                                 </div>
                             </div>
                         </div>
@@ -89,9 +89,9 @@
                     </p>
                 </div>
                 <div class="justify-content-center ">
-                    <h1 id="monthlyPaymentOutput"></h1>
+                    <h1 id="monthlyPaymentOutput" class="text-center py-2 mt-2"></h1>
                 </div>
-                <div class="row">
+                <div class="row mt-5 py-5">
                     <div class="col justify-content-start">
                         <div>
                             <label>Total Principal:</label>
@@ -106,26 +106,26 @@
                     </div>
                     <div class="col justify-content-end">
                         <div>
-                            <label id="totalPrincipalOutput">p</label>
+                            <label id="totalPrincipalOutput"></label>
 
                         </div>
                         <div>
-                            <label id="totalInterestOutput">p</label>
+                            <label id="totalInterestOutput"></label>
                         </div>
                         <div>
-                            <label id="totalCostOutput">p</label>
+                            <label id="totalCostOutput"></label>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--Amortization Table-->
-        <div class="row">
+        <div class="row justify-content-center">
             <div class="col">
                 <div class="container-fluid">
                     <div class="table-responsive">
-                        <table class="table-striped">
-                            <thead>
+                        <table class=" table table-striped">
+                            <thead class="tableHeader">
                                 <tr>
                                     <td>Month</td>
                                     <td>Payment</td>
@@ -190,7 +190,7 @@ integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0Ec
 
 </script>
 <script>
-    document.getElementById("calculateButton").addEventListener("click",todo);
+    document.getElementById("calculateButton").addEventListener("click",getValues);
 </script>
 </body>
 </html>
