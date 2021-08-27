@@ -47,7 +47,7 @@ function calculateAmortizationTable(amount,term,interest,monthlyPayment){
 
 }
 function displayCreditResults(amount,monthlyPayment,totalInterest){
-    let totalCost=amount+totalInterest;
+    let totalCost=parseFloat(amount)+parseFloat(totalInterest);
     document.getElementById("totalPrincipalOutput").innerHTML=amount.toString()+"$";
     document.getElementById("totalInterestOutput").innerHTML=totalInterest.toString()+"$";
     document.getElementById("totalCostOutput").innerHTML=totalCost.toString()+"$";
@@ -66,12 +66,12 @@ function displayTable(amortizationTable){
     for (let i=0; i<Month.length;i++){
         let tableRow=document.importNode(rowTemplate.content,true);
         let rowCols=tableRow.querySelectorAll("td");
-        rowCols[0]=Month[i];
-        rowCols[1]=Payment[i];
-        rowCols[2]=Principal[i];
-        rowCols[3]=Interest[i];
-        rowCols[4]=TotalInterest[i];
-        rowCols[5]=Balance[i];
+        rowCols[0].textContent=Month[i];
+        rowCols[1].textContent=Payment[i];
+        rowCols[2].textContent=Principal[i];
+        rowCols[3].textContent=Interest[i];
+        rowCols[4].textContent=TotalInterest[i];
+        rowCols[5].textContent=Balance[i];
         tableBody.appendChild(tableRow);
     }
 
