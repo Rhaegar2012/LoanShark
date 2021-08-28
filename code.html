@@ -21,6 +21,7 @@
 </head>
 
 <body class="d-flex flex-column h-100">
+
 <!--Nav Section-->
 <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <div class="container-fluid">
@@ -41,7 +42,7 @@
                     <a class="nav-link active" aria-current="page" href="/code.html">The Code</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" target="_blank" href="#">Git Repo</a>
+                    <a class="nav-link" target="_blank" href="https://github.com/Rhaegar2012/LoanShark">Git Repo</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" target="_blank" href="https://josetellezdev.netlify.app/">About</a>
@@ -144,7 +145,18 @@ function displayTable(amortizationTable){
                 <h5>getValues()</h5>
                 <p>Reads the values from the form and executes the calculator and display functions</p>
                 <h5>calculateMonthlyPayment()</h5>
-                <p>Takes the total value of the loan, the interest rate and the </p>
+                <p>Takes the total value of the loan, the interest rate and the total number of months to calculate 
+                    the monthly payment</p>
+                <h5>calculateAmortizationTable()</h5>
+                <p>takes the total loan amount , number of months and interest rate,along with the monthly payment and returns 
+                    the complete amortization table
+                </p>
+                <h5>displayCreditResults()</h5>
+                <p>Displays the monthly payment , total interest and total cost of the loan</p>
+                <h5>displayTable()</h5>
+                <p>Takes the generated amortization table and displays it on the page through the use 
+                    of html templates
+                </p>
             </div>
         </div>
     </div>
